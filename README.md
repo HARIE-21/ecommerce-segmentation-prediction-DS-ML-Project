@@ -26,4 +26,12 @@ It takes raw, messy e-commerce transaction data and transforms it into actionabl
 1. **The 80/20 Rule is Real:** A Pareto analysis of the dataset revealed that the top 20% of customers generate the vast majority of total revenue.
 2. **Frequency > Recency:** The Random Forest model proved that getting a customer to buy *multiple times* is a much stronger indicator of a "Whale" (high-value client) than simply having bought recently.
 3. **Strategic Pivot:** Marketing budgets should shift from standard acquisition to aggressive retention of the VIP cluster via exclusive loyalty programs.
+## 📂 Repository Structure & Files
 
+## The following files are included in this repository:
+
+* **`Customer_Analytics_Notebook.ipynb`**: The core Jupyter Notebook containing the step-by-step code for Data Cleaning, Exploratory Data Analysis (EDA), RFM Feature Engineering, K-Means Clustering, and the Random Forest classification models.
+* **`app1.py`**: The Python script for the interactive web dashboard (built with Gradio/Streamlit). This allows non-technical users to input customer metrics and receive real-time ML predictions and marketing actions.
+* **`data.csv`**: The original raw e-commerce transaction dataset used to train the models. *(Note: If your dataset is very large, you may need to zip it or use Git LFS).*
+* **`VIP_Rewards_List.csv`**: An automatically generated list of "Whale" customers (High Spend, High Frequency) exported from the ML pipeline. Designed to be handed off to the marketing team for loyalty program enrollment.
+* **`Winback_Campaign_List.csv`**: An automatically generated list of "At-Risk" customers (High Recency, Low Frequency) exported from the ML pipeline. Designed for targeted discount campaigns to prevent permanent churn.
